@@ -1,0 +1,18 @@
+{
+  "server": [
+    {
+      "ip": "localhost",
+      "port": "5432",
+      "userId": "sample03",
+      "password": "sample",
+      "id": 1629509580575
+    },
+    {
+      "ip": "localhost",
+      "port": "5432",
+      "userId": "sample02",
+      "password": "sample",
+      "id": 1629509608203
+    }
+  ]
+}

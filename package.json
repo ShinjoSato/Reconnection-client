@@ -1,0 +1,111 @@
+{
+  "name": "Disconnected",
+  "version": "0.1.6",
+  "author": "ShinioS",
+  "private": true,
+  "description": "SNS",
+  "main": "build/electron.js",
+  "homepage": "./",
+  "dependencies": {
+    "@electron/remote": "^1.2.1",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.24.0",
+    "electron-is-dev": "^2.0.0",
+    "nedb": "^1.8.0",
+    "notistack": "^1.0.10",
+    "react": "^17.0.2",
+    "react-custom-scroll": "^4.3.0",
+    "react-dom": "^17.0.2",
+    "react-intersection-observer": "^8.33.1",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "react-spring": "^9.4.2",
+    "react-wavify": "^1.5.4",
+    "simplebar-react": "^2.3.6",
+    "socket.io-client": "^4.2.0",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "react-start": "cross-env BROWSER=none react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test",
+    "react-eject": "react-scripts eject",
+    "electron-start": "wait-on http://localhost:3000 && electron .",
+    "electron-build": "electron-builder",
+    "start": "run-p react-start electron-start",
+    "build": "run-s react-build electron-build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^14.0.1",
+    "electron-builder": "^22.11.7",
+    "npm-run-all": "^4.1.5",
+    "wait-on": "^6.0.0"
+  },
+  "build": {
+    "appId": "PocketNet",
+    "files": [
+      "public/*",
+      "src/**/*",
+      "node_modules/@material-ui/*",
+      "node_modules/@testing-library/*",
+      "node_modules/axios/*",
+      "node_modules/clsx/*",
+      "node_modules/nedb/*",
+      "node_modules/notistack/*",
+      "node_modules/react/*",
+      "node_modules/react-dom/*",
+      "node_modules/react-router-dom/*",
+      "node_modules/react-wavify/*",
+      "node_modules/reduxjs/*",
+      "node_modules/socket.io-client/*",
+      "node_modules/socket.io-parse/*",
+      "package.json",
+      "build/*",
+      "build/appx/*",
+      "build/static/**/*",
+      "config/**/*",
+      "scripts/*",
+      "assets/**/*"
+    ],
+    "extends": null,
+    "directories": {
+      "buildResources": "build",
+      "output": "build"
+    },
+    "win": {
+      "target": "appx",
+      "icon": "build/appx/icon.png"
+    },
+    "appx": {
+      "identityName": "23936Shinio.PocketNet",
+      "applicationId": "Shinio.PocketNet",
+      "publisherDisplayName": "ShinioS",
+      "publisher": "CN=538D6282-CAEA-469B-B590-25C474567FA3",
+      "displayName": "Disconnected"
+    }
+  }
+}
