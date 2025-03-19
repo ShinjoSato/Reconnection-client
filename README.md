@@ -1,7 +1,7 @@
 # リアルタイムチャット (クライアントサイド)
 
 <div style="display: flex; justify-content: center;">
-    <video controls src="" muted="true"></video>
+    <video controls src="https://github.com/user-attachments/assets/4ec7491e-b545-4de3-8e94-cd3cd340c906" muted="true"></video>
 </div>
 
 ## 概要
