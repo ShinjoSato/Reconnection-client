@@ -32,7 +32,7 @@ import { StoreContext } from '../App'
 // import useStyles01 from '../style/halloween-night'
 import useStyles01 from '../style/christmas'
 
-const io = require('socket.io-client')
+import { io } from 'socket.io-client'
 
 const useStyles = makeStyles((theme) => ({
   inputs: {

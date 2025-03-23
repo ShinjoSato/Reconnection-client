@@ -1,9 +1,11 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow, ipcMain} = require('electron')
+const remoteMain = require('@electron/remote/main')
+remoteMain.initialize()
+
 const path = require('path')
 const isDev = require("electron-is-dev");
 
-require('@electron/remote/main').initialize()
 
 let mainWindow = null;
 let subWindows = [];
@@ -30,6 +32,8 @@ function createWindow () {
       ? "http://localhost:3000"
       : `file://${path.join(__dirname, "../build/index.html")}`
   );
+
+  remoteMain.enable(mainWindow.webContents)
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools();

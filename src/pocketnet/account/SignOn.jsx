@@ -218,7 +218,7 @@ const SignOn = (props) => {
                   width: '80%',
                 }}
                 defaultValue={userId}
-                disabled={(account.id.length>0)? true: false}
+                disabled={(account.id)? true: false}
                 onChange={(e) => setUserId(e.target.value)}
               />
               <TextField
